@@ -15,11 +15,13 @@
     "types": [
       "vitest/importMeta"
     ],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
   },
   "include": [
     "src/**/*.ts",
-    "test/**/*.ts"
+    "test/**/*.ts",
+    "test/**/*.tsx"
   ],
   "exclude": ["node_modules"]
 }

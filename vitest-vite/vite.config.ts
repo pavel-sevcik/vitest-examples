@@ -1,9 +1,12 @@
 import { defineConfig } from 'vitest/config';
+
 import path from 'path';
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
     test: {
-        includeSource: ['src/**/*.{js,ts}']
+        includeSource: ['src/**/*.{ts,tsx}'],
+        environment: "happy-dom"
     },
 
     define: {
@@ -14,6 +17,8 @@ export default defineConfig({
         alias: {
             '@': path.resolve(__dirname, 'src')
         },
-        extensions: ['.ts', '.tsx', '.js']
-    }
+        extensions: ['.ts', '.tsx']
+    },
+
+    plugins: [react()]
 })
