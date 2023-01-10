@@ -2,7 +2,13 @@ import { defineConfig } from 'vitest/config';
 import path from 'path';
 
 export default defineConfig({
-    test: {},
+    test: {
+        includeSource: ['src/**/*.{js,ts}']
+    },
+
+    define: {
+        'import.meta.vitest': 'undefined'
+    },
 
     resolve: {
         alias: {

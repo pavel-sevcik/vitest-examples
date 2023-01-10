@@ -11,7 +11,11 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": [
+      "vitest/importMeta"
+    ],
+    "jsx": "react-jsx"
   },
   "include": [
     "src/**/*.ts",
